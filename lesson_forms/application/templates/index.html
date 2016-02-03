@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h4>Simple form example: </h4>
+    <form action="/" method="post" style="margin-bottom: 25px" class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+            {{ searchForm.tquery (class="form-control", size=40, placeholder="search",value=query_text) }}
+            {% for error in searchForm.errors.message %} <br/>
+                <div class="alert alert-danger" style="display: inline-block">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </div>
+        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Search</button>
+    </form>
+
+{% endblock content %}
