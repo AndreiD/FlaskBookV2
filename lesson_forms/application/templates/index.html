@@ -5,7 +5,7 @@
     <form action="/" method="post" style="margin-bottom: 25px" class="navbar-form navbar-left" role="search">
         <div class="form-group">
             {{ searchForm.tquery (class="form-control", size=40, placeholder="search",value=query_text) }}
-            {% for error in searchForm.errors.message %} <br/>
+            {% for error in searchForm.errors.tquery %} <br/>
                 <div class="alert alert-danger" style="display: inline-block">
                     {{ error }}
                 </div>
